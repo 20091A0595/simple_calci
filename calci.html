@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <style>
+            .container{
+                border:1px solid black;
+                display:inline-block;
+                height: 250px;
+                padding:20px;
+                margin-left:45%;
+                margin-right: 40%;
+                margin-top:200px;
+            }
+            #demo{
+                width:200px;
+                display:block;
+                height: 30px;
+                padding:5px;
+            }
+            .inner{
+                width:200px;
+                
+                margin-top:20px;
+            }
+            button{
+                width:60px;
+                margin:2px;
+                height: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <!-- <p id="demo"></p><br> -->
+        
+        <input type="text" id="demo">
+        <div class="inner"></div>
+        <button onClick="on('1')">1</button>
+        <button onClick="on('2')">2</button>
+        <button onClick="on('3')">3</button><br>
+        <button onClick="on('4')">4</button>
+        <button onClick="on('5')">5</button>
+        <button onClick="on('6')">6</button><br>
+        <button onClick="on('7')">7</button>
+        <button onClick="on('8')">8</button>
+        <button onClick="on('9')">9</button><br>
+        <button onClick="on('0')">0</button>
+        <button onClick="on('+')">+</button>
+        <button onClick="on('-')">-</button><br>
+        <button onClick="on('*')">*</button> 
+        <button onClick="on('%')">%</button>
+        <button onClick="on('/')">/</button>          
+         <button onClick="eq('=')">=</button>
+         <button onClick="on('.')">.</button>
+
+
+         <button onClick="cl()">C</button>
+        </div>
+    </div>
+        <script>
+               var k="";
+            function on(m){
+               k=k+m;
+             var r1=document.getElementById("demo");
+               r1.value=k;      
+        }
+        function cl(){
+            var r2=document.getElementById('demo');
+            r2.value= " ";
+            k=" ";
+        }
+        function eq(){
+            var h=eval(k);
+            var r=document.getElementById("demo");
+            r.value=h;
+        }
+        </script>
+    </body>
